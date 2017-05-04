@@ -10,5 +10,5 @@ package Poligonos;
  * @author Guibson Krause
  */
 public class Poligonos {
-    
+    //
 }
