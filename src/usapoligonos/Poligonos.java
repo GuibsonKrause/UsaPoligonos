@@ -9,6 +9,11 @@ package usapoligonos;
  *
  * @author Guibson Krause
  */
-public class Poligonos {
+public interface Poligonos
+  {
+    public abstract void area();
     
-}
+    public abstract void perimetro();
+    
+    public abstract void diagonal();
+  }

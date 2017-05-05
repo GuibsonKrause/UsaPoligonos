@@ -9,16 +9,18 @@ package usapoligonos;
  *
  * @author Guibson Krause
  */
-public class Quadrado implements Poligonos
+public class Retangulo implements Poligonos
   {
-// Atributos    
+// Atributos  
     private double lado;
+    private double altura;
     private double area;
     private double perimetro;
     private double diagonal;
     
+
 // Gets & Sets
-    
+
     public double getLado()
       {
         return lado;
@@ -27,6 +29,16 @@ public class Quadrado implements Poligonos
     public void setLado(double lado)
       {
         this.lado = lado;
+      }
+
+    public double getAltura()
+      {
+        return altura;
+      }
+
+    public void setAltura(double altura)
+      {
+        this.altura = altura;
       }
 
     public double getArea()
@@ -58,27 +70,27 @@ public class Quadrado implements Poligonos
       {
         this.diagonal = diagonal;
       }
-
-// Metodos da Interface
     
+    
+// Metodos da Interface
     @Override
     public void area()
       {
-        area = lado * lado;
+        area = lado * altura;
         System.out.println("A area é de: " + area);
       }
 
     @Override
     public void perimetro()
       {
-        perimetro = 4 * lado;
+        perimetro = lado + lado + altura + altura;
         System.out.println("O perimetro é de: " + perimetro);
       }
 
     @Override
     public void diagonal()
       {
-        diagonal = Math.pow(lado, 2) + Math.pow(lado, 2);
+        diagonal = Math.pow(lado, 2) + Math.pow(altura, 2);
         diagonal = Math.sqrt(diagonal);
         System.out.printf("A diagonal é de: %.2f \n", diagonal);
       }
